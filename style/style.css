@@ -71,10 +71,15 @@ main div {
     border-radius: 4px;
     background-color: red;
     margin: 0 auto;
+    margin-bottom: .6em;
 }
 
 section {
     margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #msgErro {
