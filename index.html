@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="/assets/search.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>CEPFinder</title>
+</head>
+<body>
+    <header>
+        <h1><img src="/assets/search.svg">CEPFinder</h1>
+    </header>
+
+    <main>
+        <div>
+            <input class="search-input" type="number" id="cep" placeholder="Digite um CEP" required>
+            <button onclick="consultaCEP()" class="search-btn"><img src="/assets/search.svg" alt=""></button>            
+        </div>
+
+        <div id="msg">Nenhum item pesquisado.</div>
+        <div id="msgErro">
+            <img src="/assets/error.svg" alt="">
+            <p>Ops. Ocorreu um erro. Favor refazer a busca.</p>
+            <button onclick="novaBusca()" id="novaBusca">Nova Busca</button>
+        </div>
+
+        <section>
+            <button id="btn-del" onclick="deletar()">
+                <img src="/assets/trash.svg" alt="" title="Deletar">
+            </button>
+
+            <table class="table table-bordered border-dark w-auto" id="table">                
+                <thead class="thead bg-dark text-light table-bordered border-light">
+                    <tr>
+                        <th >CEP</th>
+                        <th>Endereço</th>
+                        <th>Bairro</th>
+                        <th>Cidade/Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="result">                    
+                </tbody>
+            </table>
+        </section>
+       
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
